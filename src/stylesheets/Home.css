@@ -50,6 +50,7 @@
 .link-container h1 {
     font-size: 2.3em;
     margin-bottom: 40px;
+    font-weight:600;
 }
 
 .city-card-container {
