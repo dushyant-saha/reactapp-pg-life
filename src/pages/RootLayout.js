@@ -12,7 +12,6 @@ function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
         <div className="auth-modal-backdrop" onClick={onClose}>
             <div className="auth-modal-content" onClick={(e) => e.stopPropagation()}>
                 
-                {/* Header */}
                 <div className="auth-modal-header">
                     <h5 className="auth-modal-title">
                         {mode === 'signup' ? 'Signup with PGLife' : 'Login with PGLife'}
@@ -22,7 +21,6 @@ function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
                     </button>
                 </div>
 
-                {/* Body */}
                 <div className="auth-modal-body">
                     {mode === 'signup' ? (
                         <form onSubmit={(e) => e.preventDefault()}>
@@ -73,7 +71,6 @@ function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
                     )}
                 </div>
 
-                {/* Footer */}
                 <div className="auth-modal-footer">
                     {mode === 'signup' ? (
                         <p>Already have an account? <span className="auth-link" onClick={() => setMode('login')}>Login</span></p>

@@ -28,6 +28,7 @@ code {
   flex-grow: 1;
 }
 
+/* Navbar */
 .header {
   box-shadow: 0px 0px 10px #626262;
 }
@@ -53,6 +54,7 @@ code {
   font-weight: bold !important;
 }
 
+/* Footer */
 .footer {
   background-color: #333333;
   color: #999999;
