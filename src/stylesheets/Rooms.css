@@ -14,12 +14,6 @@ h1 {
     margin-bottom: 40px;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 28px;
-    }
-}
-
 h3 {
     font-size: 24px;
     margin-bottom: 12px;
@@ -82,13 +76,6 @@ input[type="radio"] {
     margin-right: 8px;
 }
 
-@media (max-width: 768px) {
-    .filter-bar img {
-        display: block;
-        margin: 0px auto 4px;
-    }
-}
-
 .property-card {
     background-color: #ffffff;
     border-radius: 2px;
@@ -104,12 +91,6 @@ input[type="radio"] {
 
 .image-container {
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .image-container {
-        padding-bottom: 12px;
-    }
 }
 
 .image-container img {
