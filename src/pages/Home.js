@@ -41,9 +41,6 @@ export function Home() {
                     <div className='city-card-container'>
                         <Link className="" to='/room-search-chennai'><div className='city-card rounded-circle chennai'><img src={chennai} alt='Chennai' /></div></Link>
                     </div>
-                    <div className='city-card-container'>
-                        <Link className="" to='/room-search-hyderabad'><div className='city-card rounded-circle hyderabad'><img src={hyderabad} alt='Hyderabad' /></div></Link>
-                    </div>
                 </div>
             </div>
         </section>
