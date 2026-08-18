@@ -1,8 +1,10 @@
 // import logo from './logo.svg';
 import './stylesheets/App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { RootLayout } from './pages/RootLayout'
-import { Home } from './pages/Home'
+import { RootLayout } from './pages/RootLayout';
+import { Home } from './pages/Home';
+import { Rooms } from './pages/Rooms';
+
 
 const routing = createBrowserRouter([
   {
@@ -10,10 +12,10 @@ const routing = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { path: '/', element: <Home/>, },
-      { path: '/mumbai', element: <RootLayout />, },
-      { path: '/chennai', element: <RootLayout />, },
-      { path: '/bangalore', element: <RootLayout />, },
-      { path: '/hyderabad', element: <RootLayout />, },
+      { path: '/room-search-mumbai', element: <Rooms /> },
+      { path: '/room-search-delhi', element: <Rooms /> },
+      { path: '/room-search-chennai', element: <Rooms /> },
+      { path: '/room-search-bangalore', element: <Rooms /> },
     ],
   },
 ]);

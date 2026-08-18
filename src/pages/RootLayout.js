@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Outlet, Link, NavLink } from "react-router-dom";
 import logo from "../img/logo.png";
-import '../stylesheets/RootLayout.css'; 
+import '../stylesheets/RootLayout.css';
 
 function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
     const [mode, setMode] = useState(initialMode); // signup Mode/login Mode
@@ -11,7 +11,7 @@ function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
     return (
         <div className="auth-modal-backdrop" onClick={onClose}>
             <div className="auth-modal-content" onClick={(e) => e.stopPropagation()}>
-                
+
                 <div className="auth-modal-header">
                     <h5 className="auth-modal-title">
                         {mode === 'signup' ? 'Signup with PGLife' : 'Login with PGLife'}
@@ -86,12 +86,11 @@ function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
 
 export function RootLayout() {
     const [modalState, setModalState] = useState({ isOpen: false, mode: 'signup' });
-
     const openModal = (mode) => setModalState({ isOpen: true, mode });
     const closeModal = () => setModalState({ isOpen: false, mode: 'signup' });
 
     return (
-        <section className="page-container">
+        <section className="body">
             <header className="header sticky-top">
                 <nav className="navbar navbar-expand-lg bg-body-tertiary">
                     <Link className="navbar-brand" to='/'>
@@ -117,23 +116,41 @@ export function RootLayout() {
                 </nav>
             </header>
 
-            <section className="body">
+            <section className="page-container">
                 <Outlet />
             </section>
-
-            <AuthModal 
-                isOpen={modalState.isOpen} 
-                initialMode={modalState.mode} 
-                onClose={closeModal} 
+            {/* ---
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             --- */}
+            <AuthModal
+                isOpen={modalState.isOpen}
+                initialMode={modalState.mode}
+                onClose={closeModal}
             />
 
             <footer className="footer">
                 <div className="footer-container">
                     <ul className="footer-links">
-                        <li><NavLink className="nav-link" to='/'>PG in Delhi</NavLink></li>
-                        <li><NavLink className="nav-link" to='/'>PG in Mumbai</NavLink></li>
-                        <li><NavLink className="nav-link" to='/'>PG in Chennai</NavLink></li>
-                        <li><NavLink className="nav-link" to='/'>PG in Bangalore</NavLink></li>
+                        <li><NavLink className="nav-link" to='/room-search-delhi'>PG in Delhi</NavLink></li>
+                        <li><NavLink className="nav-link" to='/room-search-mumbai'>PG in Mumbai</NavLink></li>
+                        <li><NavLink className="nav-link" to='/room-search-chennai'>PG in Chennai</NavLink></li>
+                        <li><NavLink className="nav-link" to='/room-search-bangalore'>PG in Bangalore</NavLink></li>
                     </ul>
                     <hr className="separator" />
                     <p className="copyright-text">© PGLife 2026</p>
