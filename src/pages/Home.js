@@ -9,6 +9,7 @@ import hyderabad from "../img/hyderabad.png";
 export function Home() {
     return (
         <section className='home'>
+        {/* Hero Banner */}
             <div className="banner-container">
                 <div className="banner-form">
                     <h2 className='pb-3'>Happiness per Square Foot</h2>
@@ -26,6 +27,7 @@ export function Home() {
                     </form>
                 </div>
             </div>
+        {/* Supported City List */}
             <div className='link-container'>
                 <h1>Major Cities</h1>
                 <div className='city-list'>

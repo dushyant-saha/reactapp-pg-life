@@ -3,19 +3,20 @@ import './stylesheets/App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { RootLayout } from './pages/RootLayout';
 import { Home } from './pages/Home';
-import { Rooms } from './pages/Rooms';
-
+import { RoomSearch } from './pages/RoomSearch';
+import { RoomDetails } from './pages/RoomDetails';
 
 const routing = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
     children: [
-      { path: '/', element: <Home/>, },
-      { path: '/room-search-mumbai', element: <Rooms /> },
-      { path: '/room-search-delhi', element: <Rooms /> },
-      { path: '/room-search-chennai', element: <Rooms /> },
-      { path: '/room-search-bangalore', element: <Rooms /> },
+      { path: '/', element: <Home />, },
+      { path: '/room-search-delhi', element: <RoomSearch /> },
+      { path: '/room-search-mumbai', element: <RoomSearch /> },
+      { path: '/room-search-bangalore', element: <RoomSearch /> },
+      { path: '/room-search-chennai', element: <RoomSearch /> },
+      { path: '/room-details', element: <RoomDetails /> }
     ],
   },
 ]);
@@ -24,7 +25,6 @@ function App() {
   return (
     <RouterProvider router={routing} />
   );
-
 }
 
 export default App;

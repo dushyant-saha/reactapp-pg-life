@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import '../stylesheets/Rooms.css';
+import '../stylesheets/RoomSearch.css';
 // import img from '../img'
 
-export function Rooms() {
+export function RoomSearch() {
     return (
         <div className="link-container">
             <div className="filter-bar row justify-content-around">
@@ -52,7 +52,7 @@ export function Rooms() {
                             <div className="rent-unit">per month</div>
                         </div>
                         <div className="button-container col-6">
-                            <Link className="btn btn-primary">View</Link>
+                            <Link className="btn btn-primary" to='/room-details'>View</Link>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ export function Rooms() {
                             <div className="rent-unit">per month</div>
                         </div>
                         <div className="button-container col-6">
-                            <Link className="btn btn-primary">View</Link>
+                            <Link className="btn btn-primary" to='/room-details'>View</Link>
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ export function Rooms() {
                             <div className="rent-unit">per month</div>
                         </div>
                         <div className="button-container col-6">
-                            <Link className="btn btn-primary">View</Link>
+                            <Link className="btn btn-primary" to='/room-details'>View</Link>
                         </div>
                     </div>
                 </div>
