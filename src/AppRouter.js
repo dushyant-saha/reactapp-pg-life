@@ -5,6 +5,7 @@ import { RootLayout } from './pages/RootLayout';
 import { Home } from './pages/Home';
 import { RoomSearch } from './pages/RoomSearch';
 import { RoomDetails } from './pages/RoomDetails';
+import { Dashboard } from './pages/Dashboard';
 
 const routing = createBrowserRouter([
   {
@@ -16,7 +17,8 @@ const routing = createBrowserRouter([
       { path: '/room-search-mumbai', element: <RoomSearch /> },
       { path: '/room-search-bangalore', element: <RoomSearch /> },
       { path: '/room-search-chennai', element: <RoomSearch /> },
-      { path: '/room-details', element: <RoomDetails /> }
+      { path: '/room-details', element: <RoomDetails /> },
+      { path: '/dashboard', element: <Dashboard /> }
     ],
   },
 ]);
