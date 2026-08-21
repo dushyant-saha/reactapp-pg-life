@@ -35,9 +35,9 @@ function InterestedProperties() {
             <div className="link-container">
                 <h1>My Interested Properties</h1>
 
-                <div className="property-card property-id-<?= $property['id'] ?> row">
+                <div className="property-card property-id-0000 row">
                     <div className="image-container col-md-4">
-                        <img src="<?= $property_images[0] ?>" alt="property image" />
+                        <img src="" alt="property image" />
                     </div>
                     <div className="content-container col-md-8">
                         <div className="row no-gutters justify-content-between">
@@ -52,7 +52,7 @@ function InterestedProperties() {
 
                             </div>
                             <div className="interested-container">
-                                <i className="is-interested-image fas fa-heart" property_id=""></i>
+                                <i className="is-interested-image fas fa-heart" property_id="-"></i>
                             </div>
                         </div>
                         <div className="detail-container">
